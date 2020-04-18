@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title>Agency Clients</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+    <div class="w3-container">
+        <h2>Client List</h2>
+        <table class="w3-table w3-striped w3-border">
+            <tr>
+                <th>Number</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Delete</th>
+                <th>Send to PDF</th>
+            </tr>
+            {{#each clients}}
+            <tr>
+                <td>{{number}}</td>
+                <td>{{nom}}</td>
+                <td>{{prenom}}</td>
+                <td>
+                    <button class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Delete</button>
+                </td>
+                <td>
+                    <a href="/pdf/{{number}}" class="w3-btn w3-white w3-border w3-border-blue w3-text-blue w3-round-large">Send to PDF</button>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+</body>
+
+</html>
